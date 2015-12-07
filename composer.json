@@ -1,18 +1,17 @@
 {
-    "name": ":imrealashu/laravelrest",
-    "description": "Simple REST API Transformer for Laravel 5",
+    "name": "imrealashu/laravelrest",
+    "description": ":package_description",
     "keywords": [
-        "imrealashu",
-        "laravel",
-        "LaravelRest"
+        "league",
+        ":package_name"
     ],
     "homepage": "https://github.com/imrealashu/laravelrest",
     "license": "MIT",
     "authors": [
         {
-            "name": "Ashish Singh",
-            "email": "imrealashu@gmail.com",
-            "homepage": "https://github.com/imrealashu",
+            "name": ":author_name",
+            "email": ":author_email",
+            "homepage": ":author_website",
             "role": "Developer"
         }
     ],
@@ -26,12 +25,12 @@
     },
     "autoload": {
         "psr-4": {
-            "imrealashu\\laravelrest\\": "src"
+            "imrealashu\\productadmin\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "imrealashu\\laravelrest\\Test\\": "tests"
+            "imrealashu\\productadmin\\Test\\": "tests"
         }
     },
     "scripts": {
