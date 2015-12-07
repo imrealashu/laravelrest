@@ -1,17 +1,17 @@
 {
     "name": "imrealashu/laravelrest",
-    "description": ":package_description",
+    "description": "Simple Package to create Laravel REST API",
     "keywords": [
-        "league",
-        ":package_name"
+        "laravel",
+        "Laravel Rest"
     ],
     "homepage": "https://github.com/imrealashu/laravelrest",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": ":author_email",
-            "homepage": ":author_website",
+            "name": "Ashish Singh",
+            "email": "imrealashu@gmail.com",
+            "homepage": "https://github.com/imrealashu",
             "role": "Developer"
         }
     ],
@@ -25,12 +25,12 @@
     },
     "autoload": {
         "psr-4": {
-            "imrealashu\\productadmin\\": "src"
+            "imrealashu\\laravelrest\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "imrealashu\\productadmin\\Test\\": "tests"
+            "imrealashu\\laravelrest\\Test\\": "tests"
         }
     },
     "scripts": {

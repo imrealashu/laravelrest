@@ -4,7 +4,7 @@ namespace imrealashu\laravelrest;
 
 use Illuminate\Support\ServiceProvider;
 
-class LaravelRestServiceProvider extends ServiceProvider
+class RestServiceProvider extends ServiceProvider
 {
 
     protected $commands = [
@@ -23,7 +23,7 @@ class LaravelRestServiceProvider extends ServiceProvider
             __DIR__.'/Config/laravel-rest-config.php' => config_path('laravel-rest-config.php'),
         ]);
         $this->publishes([
-            __DIR__.'Controllers/ApiController.php' => app_path('Http/Controllers/API/ApiController.php'),
+            __DIR__.'/Controllers/ApiController.php' => app_path('Http/Controllers/API/ApiController.php'),
         ]);
     }
 
