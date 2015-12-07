@@ -1,16 +1,12 @@
-# Laravel Rest API Generator and Transformers
+# Laravel 5 Rest API Generator and Transformers
 
-[![Latest Version on Packagist][ico-version]][https://packagist.org/packages/imrealashu/laravelrest]
+[![Latest Version on Packagist][ico-version]](https://packagist.org/packages/imrealashu/laravelrest)
 [![Software License][ico-license]](LICENSE.md)
 [![Build Status][ico-travis]][link-travis]
 [![Coverage Status][ico-scrutinizer]][link-scrutinizer]
 [![Quality Score][ico-code-quality]][link-code-quality]
 [![Total Downloads][ico-downloads]][link-downloads]
 
-**Note:** Replace ```Ashish Singh``` ```imrealashu``` ```https://github.com/imrealashu``` ```imrealashu@gmail.com``` ```imrealashu``` ```LaravelRest``` ```Simple Laravel Package for REST API``` with their correct values in [README.md](README.md), [CHANGELOG.md](CHANGELOG.md), [CONTRIBUTING.md](CONTRIBUTING.md), [LICENSE.md](LICENSE.md) and [composer.json](composer.json) files, then delete this line.
-
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what
-PSRs you support to avoid any confusion with users and contributors.
 
 ## Install
 
@@ -20,30 +16,43 @@ Via Composer
 $ composer require imrealashu/laravelrest
 ```
 
-## Usage
-Add to ServiceProviders array in config/app.php file
-``` php
-imrealashu\laravelrest\RestServiceProvider::class
+Via composer.json
+
+``` json
+{
+    "require": {
+        "imrealashu/laravelrest": "0.1.*"
+    }
+}
 ```
+
+Add to ServiceProviders array in config/app.php file
+
+``` php
+'Providers' => [
+    imrealashu\laravelrest\RestServiceProvider::class
+],
+```
+
+## Usage
+
 ``` bash
 $ php artisan vendor:publish
 ```
-To install the basic skeleton
+
+To install
+
 ``` bash
 $ php artisan rest:install
 ```
+
 Create new Transformer and Controller
+
 ``` bash
 $ php artisan rest:new ControllerName
 ```
 
 For Complete Documentation Please see [Documentation](DOCUMENTATION.md)
-
-## Change log
-
-Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
-
-
 
 ## Security
 
