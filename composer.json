@@ -1,9 +1,11 @@
 {
     "name": "imrealashu/laravelrest",
-    "description": "Simple Package to create Laravel REST API",
+    "description": "Laravel 5 Package for create REST API and Transformers",
     "keywords": [
         "laravel",
-        "Laravel Rest"
+        "Laravel Rest",
+        "API",
+        "Laravel 5"
     ],
     "homepage": "https://github.com/imrealashu/laravelrest",
     "license": "MIT",

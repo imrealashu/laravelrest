@@ -7,11 +7,6 @@ use Illuminate\Support\ServiceProvider;
 class RestServiceProvider extends ServiceProvider
 {
 
-    protected $commands = [
-        'imrealashu/LaravelRest/Console/RestInstallCommand',
-        'imrealashu/LaravelRest/Console/RestNewCommand',
-    ];
-
     /**
      * Perform post-registration booting of services.
      *
@@ -34,29 +29,10 @@ class RestServiceProvider extends ServiceProvider
      */
     public function register()
     {
-       //$this->commands($this->commands);
-//        $this->registerCommands();
         $this->commands([
             'imrealashu\laravelrest\Console\RestInstallCommand',
             'imrealashu\laravelrest\Console\RestNewCommand'
         ]);
     }
-//
-//    protected function registerCommands(){
-//        $this->registerInstallCommand();
-//    }
-//
-//    protected function registerInstallCommand(){
-//
-//    }
 
-//    /**
-//     * Get the services provided by the provider.
-//     *
-//     * @return array
-//     */
-//    public function provides()
-//    {
-//        return ['LaravelRest.install'];
-//    }
 }
