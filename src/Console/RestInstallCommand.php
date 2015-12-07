@@ -1,6 +1,6 @@
 <?php
 
-namespace imrealashu\laravelrest;
+namespace imrealashu\laravelrest\Console;
 
 use Illuminate\Console\Command;
 

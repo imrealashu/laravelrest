@@ -34,8 +34,22 @@ class RestServiceProvider extends ServiceProvider
      */
     public function register()
     {
-       $this->commands($this->commands);
+       //$this->commands($this->commands);
+//        $this->registerCommands();
+        $this->commands([
+            'imrealashu\laravelrest\Console\RestInstallCommand',
+            'imrealashu\laravelrest\Console\RestNewCommand'
+        ]);
     }
+//
+//    protected function registerCommands(){
+//        $this->registerInstallCommand();
+//    }
+//
+//    protected function registerInstallCommand(){
+//
+//    }
+
 //    /**
 //     * Get the services provided by the provider.
 //     *
