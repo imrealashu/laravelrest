@@ -116,8 +116,8 @@ class CityTransformer extends Transformer{
 
 ``` json
 - data {
-    column1: something
-    column2: something else
+    column1: 'something'
+    column2: 'something else'
     column3: 33
 }
 ```
