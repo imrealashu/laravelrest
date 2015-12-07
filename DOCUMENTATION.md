@@ -63,19 +63,65 @@ protected $CityTransformer;
 		$this->CityTransformer = $CityTransformer;
 	}
 public function index(){
-	$data_array = [];
+    /**
+    * $data_array array
+    */
+	$data_array = SomeModel::select('column1','column2','column3')->get();
 	return $this->respond([
-		'data'=> $this->CityTransformer->transformCollection($data_array)
+		'data'=> $this->CityTransformer->setStatusCode(200)->transformCollection($data_array)
 		]);
 	}
 public function show($id){
-	$data_array = [];
+	$data_array = SomeModel::find($id);
 	return $this->respond([
-		'data'=> $this->CityTransformer->transformLong($data_array)
+		'data'=> $this->CityTransformer->transformLong($data_array->toArray())
 		]);
 	}
 }
 ```
 
+CityTransformer.php
 
+``` php
+<?php 
+namespace Acme\Transformers;
+class CityTransformer extends Transformer{
+	/**
+	* @param $City array
+	* @return array
+	**/
+	public function transform($item){
+	return [
+	    'newColumnAlias1' => $item->column1,
+	    'newColumnAlias2' => $item->column2,
+	    'newColumnAlias3' => $item->column3,
+	 ];
+	}
+	/**
+	* @param $City array
+	* @return array
+	**/public function transformLong($item){
+	return [
+	    'newColumnAlias1' => $item->column1,
+        'newColumnAlias2' => $item->column2,
+        'newColumnAlias3' => $item->column3,
+        'newColumnAlias4' => $item->column4,
+        'newColumnAlias5' => $item->column5,
+	 ];
+	}
+}
+```
 
+## Output
+
+``` json
+- data {
+    column1: something
+    column2: something else
+    column3: 33
+}
+```
+
+#### For any Query
+
+Just Mail me to [Ashish Singh](imrealashu@gmail.com) 
