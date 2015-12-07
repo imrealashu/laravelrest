@@ -26,7 +26,7 @@
     },
     "autoload": {
         "psr-4": {
-            ":vendor\\:package_name\\": "src"
+            "imrealashu\\LaravelRest\\": "src"
         }
     },
     "autoload-dev": {
