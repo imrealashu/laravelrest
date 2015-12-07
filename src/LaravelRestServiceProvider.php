@@ -20,7 +20,7 @@ class LaravelRestServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__.'Config/laravel-rest-config.php' => config_path('laravel-rest-config.php'),
+            __DIR__.'/Config/laravel-rest-config.php' => config_path('laravel-rest-config.php'),
         ]);
         $this->publishes([
             __DIR__.'Controllers/ApiController.php' => app_path('Http/Controllers/API/ApiController.php'),

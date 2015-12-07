@@ -1,11 +1,12 @@
 {
-    "name": ":imrealashu/laravel-rest",
+    "name": ":imrealashu/LaravelRest",
     "description": "Simple REST API Transformer for Laravel 5",
     "keywords": [
         "imrealashu",
-        "laravel-rest"
+        "laravel",
+        "LaravelRest"
     ],
-    "homepage": "https://github.com/imrealashu/laravel-rest",
+    "homepage": "https://github.com/imrealashu/LaravelRest",
     "license": "MIT",
     "authors": [
         {
