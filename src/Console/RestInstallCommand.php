@@ -89,27 +89,7 @@ class RestInstallCommand extends Command
 
     }
     private function classData($transformerName){
-        $data = '';
-        $data .= '<?php';
-        $data .= "\n";
-        $data .= 'namespace '.$transformerName.'\Transformers;';
-        $data .= "\n";
-
-        $data .= 'abstract class Transformer{';
-        $data .= "\n";
-        $data .= '/**'."\n";
-        $data .= '* @param array $items'."\n";
-        $data .= '* @return array'."\n";
-        $data .= '*/';
-        $data .= "\n";
-        $data .= 'public function transformCollection(array $items){'."\n";
-        $data .= 'return array_map([$this,"transform"],$items);'."\n";
-        $data .= '}';
-        $data .= "\n";
-        $data .= 'public abstract function transform($item);'."\n";
-        $data .= 'public abstract function transformLong($item);'."\n";
-        $data .= '}';
-
+        $data = "<?php\nnamespace ".$transformerName."\\Transformers;\n\nabstract class Transformer{\n\t/**\n\t* @param array".' $items'."\n\t*@return array\n\t*/\n\tpublic function transformCollection(array ".'$items'."){\n\t\treturn array_map([".'$this'.", transform],".'$items'.");\n\t}\n\n\tpublic abstract function transform(".'$item'.");\n\tpublic abstract function transformLong(".'$item'.");\n}";
         file_put_contents(app_path($transformerName.'/Transformer.php'),$data);
 
     }
