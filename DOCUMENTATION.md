@@ -80,6 +80,18 @@ public function show($id){
 }
 ```
 
+`setStatusCode(200)` Given will set the header status code to 200 - HTTP OK.
+You can see the list of status codes [Here](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
+
+More functions
+
+`respondWithError($message)`
+
+`respondForbidden($message)`
+
+`respondNotFound($message)`
+
+
 CityTransformer.php
 
 ``` php
